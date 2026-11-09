@@ -756,10 +756,30 @@
   width: auto;
   height: 80px;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 @media (width >= 900px) {
   .cards.logos > ul {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* promo: image on the right even when the card is wrapped in a link or article */
+.cards.promo > ul > li > article,
+.cards.promo .cards-card-link {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.cards.promo.ink .cards-card-image,
+.cards.promo.wide .cards-card-image {
+  flex-basis: 34%;
+  max-height: 260px;
+}
+
+/* logos: no tile chrome, transparent logo boxes */
+.cards.logos .cards-card-image {
+  background: transparent;
 }
