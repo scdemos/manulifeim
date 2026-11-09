@@ -332,3 +332,8 @@ main .form form {
   min-width: 150px;
   border-radius: 0;
 }
+
+main .section.form-container:has(.form.panel) > .default-content-wrapper {
+  max-width: 760px;
+  margin-inline: auto;
+}
