@@ -75,7 +75,7 @@ function buildInput(field) {
   input.type = type || 'text';
   input.id = generateId(fieldName);
   input.name = input.id;
-  input.required = required === 'true';
+  input.required = String(required).toLowerCase() === 'true';
   if (defaultValue) input.value = defaultValue;
   if (placeholder) input.placeholder = placeholder;
   return input;
@@ -94,7 +94,7 @@ function buildTextArea(field) {
   const textarea = createElement('textarea');
   textarea.id = generateId(fieldName);
   textarea.name = textarea.id;
-  textarea.required = required === 'true';
+  textarea.required = String(required).toLowerCase() === 'true';
   textarea.rows = 5;
   if (defaultValue) textarea.value = defaultValue;
   if (placeholder) textarea.placeholder = placeholder;
@@ -119,7 +119,7 @@ function buildOptionInput(field, option) {
   input.name = generateId(fieldName);
   input.value = option;
   input.checked = option === defaultValue;
-  input.required = required === 'true';
+  input.required = String(required).toLowerCase() === 'true';
 
   return input;
 }
@@ -142,7 +142,7 @@ function buildOptions(field, controlled) {
     fieldset.dataset.controller = controller;
     fieldset.dataset.condition = controlled;
   }
-  fieldset.append(buildLabel(label, 'legend', null, required === 'true'));
+  fieldset.append(buildLabel(label, 'legend', null, String(required).toLowerCase() === 'true'));
 
   splitOptions(options).forEach((o) => {
     const option = o.trim();
@@ -200,12 +200,12 @@ function buildSelect(field, controlled) {
     wrapper.dataset.controller = controller;
     wrapper.dataset.condition = controlled;
   }
-  wrapper.append(buildLabel(label, 'label', generateId(fieldName), required === 'true'));
+  wrapper.append(buildLabel(label, 'label', generateId(fieldName), String(required).toLowerCase() === 'true'));
 
   const select = createElement('select');
   select.id = generateId(fieldName);
   select.name = select.id;
-  select.required = required === 'true';
+  select.required = String(required).toLowerCase() === 'true';
   wrapper.append(select);
 
   if (placeholder) {
@@ -262,7 +262,7 @@ function buildToggle(field, controlled) {
   });
 
   const span = createElement('span');
-  const labelEl = buildLabel(label, 'label', input.id, required === 'true');
+  const labelEl = buildLabel(label, 'label', input.id, String(required).toLowerCase() === 'true');
   labelEl.prepend(input, span);
   wrapper.append(labelEl);
 
@@ -673,7 +673,7 @@ function buildField(field) {
     wrapper.dataset.condition = controlled;
   }
   const inputId = generateId(fieldName);
-  wrapper.append(buildLabel(label, 'label', inputId, field.required === 'true'));
+  wrapper.append(buildLabel(label, 'label', inputId, String(field.required).toLowerCase() === 'true'));
 
   // create help text first to get id
   let helpText;

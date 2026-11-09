@@ -621,3 +621,19 @@
 .cards.panel.emphasis .cards-card-body p:first-of-type strong {
   font-weight: 700;
 }
+
+/* contact details: lone links stay plain text links, not auto-buttons */
+.cards.panel.emphasis .cards-card-body a.button:any-link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--color-ink);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cards.panel.emphasis .cards-card-body a.button:any-link::before {
+  content: none;
+}

@@ -226,3 +226,11 @@ footer .footer.footer-layout-legal .section:nth-child(3) ul a:any-link {
 footer .footer.footer-layout-legal .section:nth-child(3) ul a:hover {
   transform: none;
 }
+
+footer .footer.footer-layout-legal a.button:any-link {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}

@@ -337,3 +337,14 @@ main .section.form-container:has(.form.panel) > .default-content-wrapper {
   max-width: 760px;
   margin-inline: auto;
 }
+
+.form.panel fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+main .section.form-container:has(.form.panel) .form-wrapper {
+  max-width: 760px;
+  margin-inline: auto;
+}
