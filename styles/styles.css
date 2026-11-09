@@ -153,6 +153,7 @@
   --nav-height: 80px;
   --nav-text-transform: none;
   --nav-letter-spacing: normal;
+  --footer-logo-filter: brightness(0) invert(1);
   --header-height: var(--nav-height);
 
   /* boilerplate compatibility – map to design tokens */
