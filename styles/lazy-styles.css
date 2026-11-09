@@ -410,6 +410,24 @@ main > .section.overlap {
   }
 }
 
+/* section-metadata style=tags: lists render as pill clouds (browse by tag, all tags) */
+main > .section.tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin: var(--space-m) 0 var(--space-xl);
+  padding: 0;
+  list-style: none;
+}
+
+main > .section.tags li {
+  padding: 6px 14px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 999px;
+  background: var(--color-light);
+  font-size: var(--body-font-size-s);
+}
+
 /* section-metadata style=page-title: white title band with an optional icon above the H1 */
 :is(main, article.article-body) > .section.page-title {
   margin: 0;
