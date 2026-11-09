@@ -1,5 +1,7 @@
 /* Contact-style form layout (inspired by contact-us pattern) */
-main .form-container {
+
+/* `main > .section` raises specificity over the generic `.section { margin: inherit }` rule */
+main > .section.form-container {
   max-width: min(var(--grid-container-width), 860px);
   width: 100%;
   margin: 0 auto;
@@ -347,4 +349,12 @@ main .section.form-container:has(.form.panel) > .default-content-wrapper {
 main .section.form-container:has(.form.panel) .form-wrapper {
   max-width: 760px;
   margin-inline: auto;
+}
+
+.form.panel form,
+main .form.panel form {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: none;
 }
