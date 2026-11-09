@@ -1531,7 +1531,7 @@ header .nav-layout-rail .nav-brand .icon-rail-mark {
     height: 46px;
     border: 0;
     border-radius: 0;
-    background: #ededed;
+    background: var(--color-gray-100);
     font-size: var(--body-font-size-m);
   }
 
