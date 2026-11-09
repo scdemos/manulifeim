@@ -325,6 +325,15 @@ main > .section.band :is(h1, h2, h3, p, li, a:any-link) {
   color: var(--color-light);
 }
 
+/* blocks inside a band (e.g. cards stats) set their own dark text; force them light here */
+main > .section.band .block :is(h2, h3, h4, p, li) {
+  color: var(--color-light);
+}
+
+main > .section.band .cards.stats .cards-card-body :is(h2, h3) {
+  color: #5fdc8f;
+}
+
 main > .section.band .icon img {
   filter: brightness(0) invert(1);
 }
@@ -390,6 +399,27 @@ main > .section.overlap {
 
   main > .section.band:not(:has(picture)) > .default-content-wrapper > * {
     max-width: 72%;
+  }
+
+  /* keep blocks clear of the right-edge image */
+  main > .section.band:has(> .default-content-wrapper > p > picture:only-child) > div:not(.default-content-wrapper) > .block {
+    max-width: 62%;
+  }
+
+  /* overlap text that sits on the band before the pulled-up panel */
+  main > .section.overlap > .default-content-wrapper:first-child :is(h2, h3, h4, p),
+  main > .section.overlap .cards.stats .cards-card-body p {
+    color: var(--color-light);
+  }
+
+  main > .section.overlap .cards.stats .cards-card-body :is(h2, h3) {
+    color: #5fdc8f;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    white-space: nowrap;
+  }
+
+  main > .section.band:has(> .default-content-wrapper > p > picture:only-child) + .section.overlap .cards.stats {
+    max-width: 62%;
   }
 
   main > .section.band > .default-content-wrapper > p:has(> picture:only-child) {
