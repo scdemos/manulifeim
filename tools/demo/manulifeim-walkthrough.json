@@ -1,0 +1,50 @@
+{
+  "topbarTitle": "Manulife Investment Management on AEM Edge Delivery",
+  "topbarSubtitle": "Institutional site demo: authoring, performance, personalization and experimentation",
+  "slides": [
+    {
+      "eyebrowLabel": "01 · The site",
+      "slideTitle": "Your institutional site, rebuilt on Edge Delivery",
+      "leadParagraph": "The Manulife IM Taiwan institutional homepage, capabilities, sustainability, viewpoints and contact pages, running on AEM Edge Delivery Services with your brand.",
+      "bulletPoints": ["Brand tokens: Manulife green, navy and coral", "Open-font substitute for Manulife JH Sans with serif italic emphasis", "Same IA: Capabilities, Viewpoints, About Us, Sustainability, Contact Us"],
+      "openInBrowser": [{ "buttonText": "Open homepage", "url": "https://main--manulifeim--scdemos.aem.page/" }, { "buttonText": "Original site", "url": "https://www.manulifeim.com/institutional/tw/en" }],
+      "keyTakeaways": "Built in hours from a reusable base, not months."
+    },
+    {
+      "eyebrowLabel": "02 · Authoring",
+      "slideTitle": "Authors edit in Document Authoring, like a document",
+      "leadParagraph": "Every page is a document in DA. Blocks such as hero, cards, tabs, table and form are simple tables authors already understand.",
+      "bulletPoints": ["Edit the fixed-income page and preview in seconds", "Reuse variants: hero banner, cards text, list and stats", "No developer needed for new pages"],
+      "openInBrowser": [{ "buttonText": "Edit fixed income in DA", "url": "https://da.live/edit#/scdemos/manulifeim/capabilities/fixed-income" }, { "buttonText": "Browse site in DA", "url": "https://da.live/#/scdemos/manulifeim" }],
+      "keyTakeaways": "Marketing owns the content lifecycle end to end."
+    },
+    {
+      "eyebrowLabel": "03 · Performance",
+      "slideTitle": "Lighthouse 100 by default",
+      "leadParagraph": "Edge Delivery serves pre-rendered HTML from the edge with optimized images and no build step, so Core Web Vitals stay green as the site grows.",
+      "openInBrowser": [{ "buttonText": "Run PageSpeed Insights", "url": "https://pagespeed.web.dev/analysis?url=https://main--manulifeim--scdemos.aem.page/" }],
+      "keyTakeaways": "Faster pages mean better engagement and SEO."
+    },
+    {
+      "eyebrowLabel": "04 · Experimentation",
+      "slideTitle": "A/B test the homepage hero in minutes",
+      "leadParagraph": "The homepage runs an experiment: the brand hero versus the L&G partnership announcement. Use the Experimentation overlay to simulate each variant.",
+      "openInBrowser": [{ "buttonText": "Control", "url": "https://main--manulifeim--scdemos.aem.page/?experiment=home-hero/control" }, { "buttonText": "Challenger", "url": "https://main--manulifeim--scdemos.aem.page/?experiment=home-hero/challenger-1" }],
+      "keyTakeaways": "Authors create variants as documents. No tickets, no deploys."
+    },
+    {
+      "eyebrowLabel": "05 · Campaigns",
+      "slideTitle": "Campaign-specific experiences",
+      "leadParagraph": "A Credit without boundaries campaign swaps the homepage for visitors arriving from that campaign, driven by a URL or UTM parameter.",
+      "openInBrowser": [{ "buttonText": "Campaign view", "url": "https://main--manulifeim--scdemos.aem.page/?campaign=global-credit" }],
+      "keyTakeaways": "Personalize by campaign without new templates."
+    },
+    {
+      "eyebrowLabel": "06 · Engagement",
+      "slideTitle": "Interactive tools and lead capture",
+      "leadParagraph": "A compounding calculator on multi-asset solutions and a spreadsheet-driven contact form show how interactive experiences are authored, not coded.",
+      "openInBrowser": [{ "buttonText": "Multi-asset calculator", "url": "https://main--manulifeim--scdemos.aem.page/capabilities/multi-asset-solutions" }, { "buttonText": "Contact form", "url": "https://main--manulifeim--scdemos.aem.page/contact-us" }, { "buttonText": "Form definition in DA", "url": "https://da.live/sheet#/scdemos/manulifeim/forms/contact-us" }],
+      "keyTakeaways": "Forms are a spreadsheet; calculators are reusable blocks."
+    }
+  ]
+}
