@@ -151,6 +151,8 @@
 
   /* nav / layout */
   --nav-height: 80px;
+  --nav-text-transform: none;
+  --nav-letter-spacing: normal;
   --header-height: var(--nav-height);
 
   /* boilerplate compatibility – map to design tokens */
