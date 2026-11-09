@@ -611,3 +611,13 @@
     order: 0;
   }
 }
+
+/* Emphasis modifier: bold sans titles (contact directories, key facts) */
+.cards.panel.emphasis .cards-card-body :is(h2, h3) {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+}
+
+.cards.panel.emphasis .cards-card-body p:first-of-type strong {
+  font-weight: 700;
+}

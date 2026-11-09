@@ -37,6 +37,15 @@ function writeHelpText(text, inputId) {
 }
 
 /**
+ * Split an authored options string. Use `|` when option labels contain commas.
+ * @param {string} options
+ * @returns {string[]}
+ */
+function splitOptions(options = '') {
+  return options.split(options.includes('|') ? '|' : ',');
+}
+
+/**
  * Creates a label or legend element
  * @param {string} text - Label text content
  * @param {string} [type='label'] - Either 'label' or 'legend'
@@ -135,7 +144,7 @@ function buildOptions(field, controlled) {
   }
   fieldset.append(buildLabel(label, 'legend', null, required === 'true'));
 
-  options.split(',').forEach((o) => {
+  splitOptions(options).forEach((o) => {
     const option = o.trim();
     const input = buildOptionInput(field, option);
     const span = createElement('span');
@@ -214,7 +223,7 @@ function buildSelect(field, controlled) {
       select.append(...os);
     });
   } catch (error) {
-    options.split(',').forEach((o) => {
+    splitOptions(options).forEach((o) => {
       const option = o.trim();
       const optionEl = createElement('option');
       optionEl.value = option;
