@@ -637,3 +637,8 @@
 .cards.panel.emphasis .cards-card-body a.button:any-link::before {
   content: none;
 }
+
+.cards.panel.emphasis .cards-card-body p.button-container {
+  margin: 0.8em 0 0;
+  padding: 0;
+}
