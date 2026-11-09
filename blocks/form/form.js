@@ -42,7 +42,8 @@ function writeHelpText(text, inputId) {
  * @returns {string[]}
  */
 function splitOptions(options = '') {
-  return options.split(options.includes('|') ? '|' : ',');
+  // pipes win when present; a trailing `|` keeps a single comma-containing option intact
+  return options.split(options.includes('|') ? '|' : ',').map((o) => o.trim()).filter(Boolean);
 }
 
 /**
