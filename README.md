@@ -1,10 +1,11 @@
-Demo Project - Cloud Adoption
+Manulife Investment Management: AEM Edge Delivery demo
+
+Built from the [scdemos/demo](https://github.com/scdemos/demo) base with the `customer-demo` skill. Source: https://www.manulifeim.com/institutional/tw/en
 
 ## Environments
-- Preview: https://main--demo--scdemos.aem.page/
-- Live: https://main--demo--scdemos.aem.live/
-- CDN (production): https://demo.bbird.live/
-- Authoring (DA): https://da.live/#/scdemos/demo
+- Preview: https://main--manulifeim--scdemos.aem.page/
+- Live: https://main--manulifeim--scdemos.aem.live/
+- Authoring (DA): https://da.live/#/scdemos/manulifeim
 
 ## Documentation
 
